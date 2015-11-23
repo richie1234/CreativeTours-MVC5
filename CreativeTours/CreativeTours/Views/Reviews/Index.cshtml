@@ -1,0 +1,24 @@
+﻿@model CreativeTours.Models.Tour
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Reviews for @Model.Name</h2>
+
+@Html.Partial("_Reviews", @Model.Reviews)
+
+
+<p>
+    @*<button type="button" class="btn btn-success .btn-md">@Html.ActionLink("Create New", "Create", new { tourId = Model.Id })</button>*@
+
+    <a href="@Url.Action("Create", "Reviews", new { tourId = Model.Id })" class="btn btn-success">
+        Add New Review
+        <span class="glyphicon glyphicon-plus-sign" />
+    </a>
+
+
+
+
+
+</p>
